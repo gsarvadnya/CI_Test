@@ -25,9 +25,10 @@ jobs:
         python-version: "3.x"
         # Optional - x64 or x86 architecture, defaults to x64
         architecture: 'x64'
-    - name: Upgrade pip, setuptools, and wheel
+    
+    - name: Upgrade pip, setup tools, and wheel
         run: |
-          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install --upgrade pip setup tools wheel
           
     - name: Install dependencies
       run: |
