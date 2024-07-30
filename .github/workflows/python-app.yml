@@ -47,9 +47,14 @@ jobs:
         pip install -r ./requirements_build.txt
         pip install -r ./src/requirements.txt
         # pip install --upgrade pyinstaller
-        yum group install "Development Tools"
-        yum -y install gcc
-        yum install python-devel
+        # yum group install "Development Tools"
+        # yum -y install gcc
+        # yum install python-devel
+        python -m pip install build twine check-wheel-contents
+        python -m build --sdist --wheel .
+        ls -l dist
+        check-wheel-contents dist/*.whl
+        python -m twine check dist/*
         pip install pycrypto
 
     - name: script
