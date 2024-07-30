@@ -53,6 +53,7 @@ jobs:
         echo "Build Linux package - RELEASE_VERSION=$RELEASE_VERSION"
         export LINUX_PACKAGE="VMware-NSX-Migration-for-VMware-Cloud-Director-$RELEASE_VERSION-Centos.tar.gz"
         echo "LINUX_PACKAGE=$LINUX_PACKAGE"
+        pip install --upgrade pyinstaller
         python -m PyInstaller src/vcdNSXMigrator.spec
         tar -czvf $LINUX_PACKAGE -C dist/ 
     # - name: Build
