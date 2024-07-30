@@ -28,11 +28,11 @@ jobs:
     
     - name: Upgrade pip, setuptools, and wheel
       run: |
-          python3 -m pip install --upgrade pip setuptools wheel
+          python -m pip install --upgrade pip setuptools wheel
           
     - name: Install dependencies
       run: |
-        python3 -m pip install --upgrade pip
+        # python -m pip install --upgrade pip
         pip install -r ./requirements_build.txt
         pip install -r ./src/requirements.txt
         pip install pycrypto
