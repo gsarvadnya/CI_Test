@@ -26,13 +26,13 @@ jobs:
         # Optional - x64 or x86 architecture, defaults to x64
         architecture: 'x64'
     
-    - name: Upgrade pip, setup tools, and wheel
+    - name: Upgrade pip, setuptools, and wheel
       run: |
-          python -m pip install --upgrade pip setup tools wheel
+          python -m pip install --upgrade pip setuptools wheel
           
     - name: Install dependencies
       run: |
-        python3 -m pip install --upgrade pip
+        python -m pip install --upgrade pip
         pip install -r ./requirements_build.txt
         pip install -r ./src/requirements.txt
         pip install pycrypto
