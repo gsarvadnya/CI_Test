@@ -2,8 +2,7 @@
 FROM centos:latest
 
 # Install any necessary packages
-RUN yum update -y && \
-    yum install -y curl
+RUN yum update -y && \\\r\n yum install -y curl
 
 # Define the default command
 CMD ["bash"]
